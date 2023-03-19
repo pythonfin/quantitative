@@ -27,6 +27,7 @@ class QuantitativeCalcs:
         Tuple[pd.DataFrame] containing the yf.download stock ticker data of time index
     self.tickers : list
         stock ticker symbols to be used in the calculations
+        example: tickers = ["SCGLY", "BNPQY", "RNLSY", "LRLCY", "SBGSY", "VEOEY"]
     """
 
     def __init__(self, tickers):
@@ -71,7 +72,7 @@ class QuantitativeCalcs:
 
             data: Tuple[pd.DataFrame] = yf.download(stock_str + " " + index, **kwargs, group_by='ticker')
 
-            # Check if the data is not empty
+            # Check if the data isn't empty
             if data.empty:
                 raise ValueError("yf.download didn't complete correctly for the ticker list")
 
