@@ -31,6 +31,20 @@ from basic.quantitative_basic import QuantitativeBeta
     },
 ])
 def test_load_data(params):
+    """
+    Ensure that yfinance loads basic values properly
+    :param params: All parameters required to be input to run the test
+    :type params: 'list'
+
+    :params:
+        ticker (list['str']): list of the ticker symbol
+        start_date (str): The start date in YYYY-MM-DD format.
+        periods (int): number of time periods to be utilized
+        frequency (str): Time span of future calculations
+        intervals (str): Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 1d, 5d, 1wk, 1mo, 3mo]
+        index (str): comparative index to be used for beta calculations
+        results (float): value of the stock ticker on the first period day noted
+    """
     # set initial program parameters
     calculations = QuantitativeBeta(params['ticker'])
 
