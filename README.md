@@ -31,7 +31,7 @@ To run this program:
 
 Example output of:
 
-    tickers_list = ["SCGLY", "BNPQY", "RNLSY", "LRLCY", "SBGSY", "VEOEY"]
+    tickers_list = ["UL", "HSBC", "AZN", "BP", "VOD", "BHP", "GSK"]
     index = "^GSPC"
     start_date = '2020-01-01'
     date_range = pd.date_range('2021-01-31', periods=24, freq='M')
