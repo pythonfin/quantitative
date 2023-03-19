@@ -4,6 +4,7 @@
 # third party imports
 import pytest
 import pandas as pd
+import typing
 
 # local application and library specifics imports
 from basic.quantitative_basic import QuantitativeBeta
@@ -30,7 +31,7 @@ from basic.quantitative_basic import QuantitativeBeta
         "results": 38.04
     },
 ])
-def test_load_data(params):
+def test_load_data(params: dict):
     """
     Ensure that yfinance loads basic values properly
     :param params: All parameters required to be input to run the test
