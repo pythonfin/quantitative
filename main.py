@@ -16,8 +16,7 @@ from basic.quantitative_basic import QuantitativeBeta
 if __name__ == '__main__':
 
     # set initial program parameters
-    tickers_list = ["HSBC", "BP"]
-    # tickers_list = ["UL", "HSBC", "AZN", "BP", "VOD", "BHP", "GSK"]
+    tickers_list = ["UL", "HSBC", "AZN", "BP", "VOD", "BHP", "GSK"]
     calculations = QuantitativeBeta(tickers_list)
 
     index = "^GSPC"
