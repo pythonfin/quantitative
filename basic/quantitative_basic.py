@@ -184,6 +184,7 @@ class QuantitativeBeta(QuantitativeCalcs):
                 raise KeyError(f"Data for the {index} wasn't loaded")
 
             # Calculate index returns using vectorized operations
+            # ex EOD index[day + 1] value / EOD index [day] value - 1  gives  daily % return
             sp500_returns = df_yf_data[index]['Adj Close'] \
                 .values[1:] / df_yf_data[index]['Adj Close'].values[:-1] - 1
 
@@ -200,6 +201,7 @@ class QuantitativeBeta(QuantitativeCalcs):
                     raise ValueError(f"Cannot calculate beta for {ticker} - lacking sufficient data")
 
                 # Calculate the stock's beta
+                # beta = covariance (stock's return relative to market) / variance (of the market's return)
                 beta = np.cov(stock_returns, sp500_returns)[0, 1] / np.var(sp500_returns)
 
                 betas_dict[ticker] = round(beta, 2)

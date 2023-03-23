@@ -10,6 +10,8 @@ To run this program:
     pip install poetry
     python -m poetry lock --no-update
     python -m poetry install
+
+    need extra package? poetry add 'packagename'
     
     #2) Running program
     For index argument, current options are:
