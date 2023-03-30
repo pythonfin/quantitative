@@ -1,10 +1,15 @@
 #!/usr/bin/env python3
 # pytest test_quantitative_basic.py
 
+import sys
+import os
+
 # third party imports
 import pytest
 import pandas as pd
-import typing
+
+# Add the application root directory to the Python path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 # local application and library specifics imports
 from basic.quantitative_basic import QuantitativeBeta
