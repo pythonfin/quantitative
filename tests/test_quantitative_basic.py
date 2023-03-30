@@ -11,7 +11,7 @@ from basic.quantitative_basic import QuantitativeBeta
 
 
 # set up test inputs by setting up a parameter dictionary for values
-@pytest.mark.beta
+@pytest.mark.quant_beta
 @pytest.mark.parametrize("yfinance_params", [
     {
         "ticker": ["HSBC"],
@@ -32,7 +32,6 @@ from basic.quantitative_basic import QuantitativeBeta
         "results": 38.04
     },
 ])
-
 def test_load_data(yfinance_params: dict):
     """
     Ensure that yfinance loads basic values properly
